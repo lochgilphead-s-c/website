@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { Link, graphql, withPrefix } from "gatsby";
 import Helmet from "react-helmet";
 import Oswald from "typeface-oswald";
 import Reactstrap from "reactstrap";
@@ -657,11 +657,6 @@ export default class IndexPage extends React.Component {
                       </a>
                     </p>
                   </li>
-                  {/* <li>
-                    <p>
-                      <a href="#">Membership</a>
-                    </p>
-                  </li> */}
                 </ul>
               </div>
               <div className="col-md-4 mx-auto">
@@ -669,17 +664,24 @@ export default class IndexPage extends React.Component {
                 <ul>
                   <li>
                     <p>
-                      <a href="#">Childrens rights policy statement</a>
+                      <a
+                        href="/docs/Code of Conduct for Players Parents.pdf"
+                        target="_blank"
+                      >
+                        Code of conduct for Players and Parents
+                      </a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a href="#">Child protection policy statement</a>
+                      <a href="#" target="_blank">
+                        Child protection policy statement
+                      </a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a href="#">
+                      <a href="#" target="_blank">
                         Anti bullying policy statement – click here Code of
                         conduct for safeguarding
                       </a>
@@ -687,17 +689,23 @@ export default class IndexPage extends React.Component {
                   </li>
                   <li>
                     <p>
-                      <a href="#">Player code of conduct</a>
+                      <a href="#" target="_blank">
+                        Player code of conduct
+                      </a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a href="#">Volunteer code of conduct</a>
+                      <a href="#" target="_blank">
+                        Volunteer code of conduct
+                      </a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a href="#">Privacy notice</a>
+                      <a href="#" target="_blank">
+                        Privacy notice
+                      </a>
                     </p>
                   </li>
                 </ul>
