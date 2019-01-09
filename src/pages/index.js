@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql, withPrefix } from "gatsby";
+import { graphql } from "gatsby";
 import Helmet from "react-helmet";
-import Oswald from "typeface-oswald";
-import Reactstrap from "reactstrap";
+// import Oswald from "typeface-oswald";
+// import Reactstrap from "reactstrap";
 import Scrollspy from "react-scrollspy";
 import Logo from "../img/logo/LSC_logo-double-small.fw.png";
 import SponsorMain from "../img/sponsors/ardrishaig-community-trust-greyscale.jpg";
@@ -81,8 +81,8 @@ export default class IndexPage extends React.Component {
   };
 
   render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+    // const { data } = this.props;
+    // const { edges: posts } = data.allMarkdownRemark;
 
     return (
       <div>
@@ -309,6 +309,7 @@ export default class IndexPage extends React.Component {
                     className="text-white"
                     href="https://goo.gl/maps/FSPcEEzgxVv"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Lochgilphead Joint Campus
                   </a>
@@ -345,6 +346,7 @@ export default class IndexPage extends React.Component {
                   <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLSe7oHY4CO3sQf27nguritK9YmNTz6BdXn_5lXsvAH6H0AZ-yw/viewform?usp=sf_link"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     complete the registration form
                   </a>
@@ -380,7 +382,11 @@ export default class IndexPage extends React.Component {
                 <h4>Payment</h4>
                 <p>
                   Fees can be paid by{" "}
-                  <a href="https://www.paypal.com/uk/home" target="_blank">
+                  <a
+                    href="https://www.paypal.com/uk/home"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     paypal
                   </a>{" "}
                   in advance of the session by using the paypal address of
@@ -610,7 +616,10 @@ export default class IndexPage extends React.Component {
                 <h2 className="section-heading text-center">Calendar</h2>
                 <hr className="my-4 light" />
                 <div className="lsc-googleCalendar">
-                  <iframe src="https://calendar.google.com/calendar/b/1/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23f05f40&amp;src=lochgilpheadsoccercentre%40gmail.com&amp;color=%f05f40&amp;ctz=Europe%2FLondon" />
+                  <iframe
+                    title="lscCalendar"
+                    src="https://calendar.google.com/calendar/b/1/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23f05f40&amp;src=lochgilpheadsoccercentre%40gmail.com&amp;color=%f05f40&amp;ctz=Europe%2FLondon"
+                  />
                 </div>
               </div>
             </div>
@@ -633,13 +642,18 @@ export default class IndexPage extends React.Component {
                   <a
                     href="https://www.facebook.com/groups/192957874159649/"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     https://www.facebook.com/groups/192957874159649/
                   </a>
                 </p>
                 <p>
                   Twitter:{" "}
-                  <a href="https://twitter.com/LochgilpheadSC" target="_blank">
+                  <a
+                    href="https://twitter.com/LochgilpheadSC"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     https://twitter.com/LochgilpheadSC
                   </a>
                 </p>
@@ -652,6 +666,7 @@ export default class IndexPage extends React.Component {
                       <a
                         href="https://docs.google.com/forms/d/e/1FAIpQLSe7oHY4CO3sQf27nguritK9YmNTz6BdXn_5lXsvAH6H0AZ-yw/viewform?usp=sf_link"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         Registration form
                       </a>
@@ -665,8 +680,9 @@ export default class IndexPage extends React.Component {
                   <li>
                     <p>
                       <a
-                        href="/docs/Code of Conduct for Players Parents.pdf"
+                        href="/docs/Code-of-Conduct-for-Players-Parents.pdf"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         Code of conduct for Players and Parents
                       </a>
@@ -674,36 +690,44 @@ export default class IndexPage extends React.Component {
                   </li>
                   <li>
                     <p>
-                      <a href="#" target="_blank">
+                      <a
+                        href="/docs/LSC-club-guide-child-wellbeing-protection-policy-statements.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Child protection policy statement
                       </a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a href="#" target="_blank">
-                        Anti bullying policy statement – click here Code of
-                        conduct for safeguarding
+                      <a
+                        href="/docs/LSC-club-guide-responding-to-concerns-procedures.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Responding to concerns
                       </a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a href="#" target="_blank">
-                        Player code of conduct
+                      <a
+                        href="/docs/LSC-club-guide-safeguarding-childrens-wellbeing.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Safeguarding child wellbeing
                       </a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a href="#" target="_blank">
-                        Volunteer code of conduct
-                      </a>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <a href="#" target="_blank">
+                      <a
+                        href="/docs/LSC-Privacy-Notice.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Privacy notice
                       </a>
                     </p>
@@ -723,7 +747,11 @@ export default class IndexPage extends React.Component {
                 </div>
                 <p>
                   We are a{" "}
-                  <a href="https://www.coerverscotland.uk/" target="_blank">
+                  <a
+                    href="https://www.coerverscotland.uk/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Coerver Partner Club
                   </a>
                   .
@@ -741,7 +769,7 @@ export default class IndexPage extends React.Component {
               </div>
             </div>
             <p className="text-center lsc-copyright">
-              &copy; Lochgilphead Soccer Centre 2018
+              &copy; Lochgilphead Soccer Centre 2019
             </p>
           </div>
         </section>
