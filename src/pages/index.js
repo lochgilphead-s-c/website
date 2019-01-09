@@ -649,14 +649,19 @@ export default class IndexPage extends React.Component {
                 <ul>
                   <li>
                     <p>
-                      <a href="#">PVG Check</a>
+                      <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSe7oHY4CO3sQf27nguritK9YmNTz6BdXn_5lXsvAH6H0AZ-yw/viewform?usp=sf_link"
+                        target="_blank"
+                      >
+                        Registration form
+                      </a>
                     </p>
                   </li>
-                  <li>
+                  {/* <li>
                     <p>
                       <a href="#">Membership</a>
                     </p>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <div className="col-md-4 mx-auto">
