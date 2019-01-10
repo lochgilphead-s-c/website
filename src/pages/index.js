@@ -369,14 +369,14 @@ export default class IndexPage extends React.Component {
                 <h4>Soccer Centre</h4>
                 <p>
                   Once you've submitted the registration form and paid the
-                  annual membership fee, you must pay for the six sessions per
+                  annual membership fee, you must pay for the nine sessions this
                   term in advance.
                 </p>
                 <p>
-                  <strong>P1:</strong> £1 per session = £6 at the start of term.
+                  <strong>P1:</strong> £1 per session = £9 at the start of term.
                 </p>
                 <p>
-                  <strong>P2-7:</strong> £2 per session = £12 at the start of
+                  <strong>P2-7:</strong> £2 per session = £18 at the start of
                   term.
                 </p>
                 <h4>Payment</h4>
