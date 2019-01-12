@@ -30,6 +30,9 @@ import "../components/css/lsc.css";
 
 // import Layout from '../components/Layout'
 // let ticking = false;
+// TODO:
+//  Add google webmaster code
+//  Run lighthouse and add helmet
 
 export default class IndexPage extends React.Component {
   constructor(props) {
@@ -86,7 +89,20 @@ export default class IndexPage extends React.Component {
 
     return (
       <div>
-        <Helmet title="Lochgilphead Soccer Centre and Lochgilphead Red Star YFC" />
+        <Helmet
+          title="Lochgilphead Soccer Centre and Lochgilphead Red Star YFC"
+          htmlAttributes={{ lang: "en-GB" }}
+          meta={[
+            {
+              name: `description`,
+              content: `Established in 1995, Lochgilphead Soccer Centre is a youth football club supporting over 120 Mid-Argyll children to develop their football skills, work as a team and build confidence.`
+            },
+            {
+              name: "google-site-verification",
+              content: "ZGxgyfuzXApA4iZgNESXCbSd0_B6gEvSco3tAqZy0Gc"
+            }
+          ]}
+        />
         <nav
           className="navbar navbar-expand-lg navbar-light fixed-top"
           id="mainNav"

@@ -1,7 +1,8 @@
 module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
-    title: "Gatsby + Netlify CMS Starter"
+    siteUrl: `https://lochgilpheadsoccercentre.club`,
+    title: "Lochgilphead Soccer Centre and Lochgilphead Red Star YFC"
   },
   plugins: [
     {
@@ -18,6 +19,10 @@ module.exports = {
     },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: { exclude: ["/blog/*", "/contact/*", "/tags/*"] }
+    },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",
