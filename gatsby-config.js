@@ -14,11 +14,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: "./src/img/logo/lsc-logo.fw.png"
+        logo: "./src/img/logo/lsc-logo.fw.png",
+        // WebApp Manifest Configuration
+        appName: `Lochgilphead Soccer Centre`, // Inferred with your package.json
+        appDescription: null,
+        developerName: `Patrick Grey`,
+        developerURL: `https://patrickgrey.co.uk`,
+        dir: "auto",
+        lang: "en-GB",
+        background: "#fff",
+        theme_color: "#6599ff",
+        display: "standalone",
+        orientation: "any",
+        start_url: "/",
+        version: "1.0"
       }
     },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
+    "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
