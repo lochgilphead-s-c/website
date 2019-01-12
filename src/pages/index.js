@@ -338,7 +338,7 @@ export default class IndexPage extends React.Component {
                   <a className="text-white" href="#calendar">
                     Calendar
                   </a>{" "}
-                  for times and dates.
+                  for dates and times.
                 </p>
                 <h3>Lochgilphead Red Star YFC</h3>
                 <p>
