@@ -329,8 +329,8 @@ export default class IndexPage extends React.Component {
                   >
                     Lochgilphead Joint Campus
                   </a>
-                  , except for Primary 1's during Winter who train indoors. See
-                  the{" "}
+                  , except for Primary 1&apos;s during Winter who train indoors.
+                  See the{" "}
                   <a className="text-white" href="#register">
                     Register
                   </a>{" "}
