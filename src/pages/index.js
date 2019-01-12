@@ -99,7 +99,7 @@ export default class IndexPage extends React.Component {
             },
             {
               name: "google-site-verification",
-              content: "ZGxgyfuzXApA4iZgNESXCbSd0_B6gEvSco3tAqZy0Gc"
+              content: "sxOy8NBiEqeIbAadOFNXvgmeDc3f738i9SLiD850Ki8"
             }
           ]}
         />
