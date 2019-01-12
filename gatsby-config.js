@@ -21,7 +21,9 @@ module.exports = {
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-plugin-sitemap",
-      options: { exclude: ["/blog/*", "/contact/*", "/tags/*"] }
+      options: {
+        exclude: ["/blog/*", "/contact/*", "/tags/*", "/contact", "/tags"]
+      }
     },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
