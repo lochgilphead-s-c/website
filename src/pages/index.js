@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+// import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 // import Oswald from "typeface-oswald";
 // import Reactstrap from "reactstrap";
 import Scrollspy from "react-scrollspy";
 import Logo from "../img/logo/LSC_logo-double-small.fw.png";
+import LogoLarge from "../img/logo/LSC_logo-double.fw.png";
 import SponsorMain from "../img/sponsors/ardrishaig-community-trust-greyscale.jpg";
 import SponsorMainColour from "../img/sponsors/ardrishaig-community-trust.jpg";
 import Sponsor1 from "../img/sponsors/ventient-greyscale.png";
@@ -95,7 +96,39 @@ export default class IndexPage extends React.Component {
           meta={[
             {
               name: `description`,
-              content: `Established in 1995, Lochgilphead Soccer Centre is a youth football club supporting over 120 Mid-Argyll children to develop their football skills, work as a team and build confidence.`
+              content: `Lochgilphead Soccer Centre is a youth football club supporting over 120 Mid-Argyll children to develop their football skills, work as a team and build confidence.`
+            },
+            {
+              property: `og:title`,
+              content: `Lochgilphead Soccer Centre`
+            },
+            {
+              property: `og:image`,
+              content: `https://lochgilpheadsoccercentre.club/img/LSC_logo-double.fw.png`
+            },
+            {
+              property: `og:url`,
+              content: `https://lochgilpheadsoccercentre.club/`
+            },
+            {
+              property: `og:description`,
+              content: `A youth football club in Argyll`
+            },
+            {
+              name: `twitter:card`,
+              content: `https://lochgilpheadsoccercentre.club/img/content-image-1.jpg`
+            },
+            {
+              property: `og:site_name`,
+              content: `Lochgilphead Soccer Centre`
+            },
+            {
+              name: `twitter:image:alt`,
+              content: `Evening shot of pitches at Lochgilphead Soccer Centre`
+            },
+            {
+              name: `twitter:site`,
+              content: `@LochgilpheadSC`
             },
             {
               name: "google-site-verification",
@@ -329,8 +362,8 @@ export default class IndexPage extends React.Component {
                   >
                     Lochgilphead Joint Campus
                   </a>
-                  , except for Primary 1's during Winter who train indoors. See
-                  the{" "}
+                  , except for Primary 1&apos;s during Winter who train indoors.
+                  See the{" "}
                   <a className="text-white" href="#register">
                     Register
                   </a>{" "}
@@ -802,26 +835,26 @@ IndexPage.propTypes = {
   })
 };
 
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-          }
-        }
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query IndexQuery {
+//     allMarkdownRemark(
+//       sort: { order: DESC, fields: [frontmatter___date] }
+//       filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+//     ) {
+//       edges {
+//         node {
+//           excerpt(pruneLength: 400)
+//           id
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             title
+//             templateKey
+//             date(formatString: "MMMM DD, YYYY")
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
