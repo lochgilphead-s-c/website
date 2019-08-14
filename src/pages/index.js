@@ -417,8 +417,7 @@ export default class IndexPage extends React.Component {
                 </p> */}
                 <h4>Soccer Centre</h4>
                 <p>
-                  Once you've submitted the registration form and paid the
-                  annual membership fee, you must pay for the eight sessions this
+                  Once you've submitted the registration form, you must pay for the eight sessions this
                   term in advance.
                 </p>
                 <p>
