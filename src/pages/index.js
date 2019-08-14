@@ -405,7 +405,7 @@ export default class IndexPage extends React.Component {
                 <p>
                   <strong>
                     All fees due must be paid before your child attends
-                    training, except for Minikickers.
+                    {/* training, except for Minikickers. */}.
                   </strong>
                 </p>
                 {/* <h4>Annual Membership fee: £10</h4>
@@ -418,18 +418,18 @@ export default class IndexPage extends React.Component {
                 <h4>Soccer Centre</h4>
                 <p>
                   Once you've submitted the registration form and paid the
-                  annual membership fee, you must pay for the six sessions this
+                  annual membership fee, you must pay for the eight sessions this
                   term in advance.
                 </p>
                 <p>
-                  <strong>P1:</strong> £1 per session = £6 at the start of term.
+                  <strong>P1:</strong> £1 per session = £8 at the start of term.
                 </p>
                 <p>
-                  <strong>P2-7:</strong> £2 per session = £12 at the start of
+                  <strong>P2-7:</strong> £2 per session = £16 at the start of
                   term.
                 </p>
-                <h4>Minikickers</h4>
-                <p>Pre-schoolers sessions will run on May 17th, May 31st, June 7th and June 14th. It is £1 per session and can be paid on each night your child attends.</p>
+                {/* <h4>Minikickers</h4>
+                <p>Pre-schoolers sessions will run on May 17th, May 31st, June 7th and June 14th. It is £1 per session and can be paid on each night your child attends.</p> */}
                 <h4>Payment</h4>
                 <p>
                   Fees can be paid by{" "}
