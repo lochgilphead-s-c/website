@@ -421,28 +421,17 @@ export default class IndexPage extends React.Component {
                   term in advance.
                 </p>
                 <p>
-                  <strong>P1:</strong> £1 per session = £8 at the start of term.
+                  <strong>P1:</strong> £1 per session = £9 at the start of term.
                 </p>
                 <p>
-                  <strong>P2-7:</strong> £2 per session = £16 at the start of
+                  <strong>P2-7:</strong> £2 per session = £18 at the start of
                   term.
                 </p>
                 {/* <h4>Minikickers</h4>
                 <p>Pre-schoolers sessions will run on May 17th, May 31st, June 7th and June 14th. It is £1 per session and can be paid on each night your child attends.</p> */}
                 <h4>Payment</h4>
                 <p>
-                  Fees can be paid by{" "}
-                  <a
-                    href="https://www.paypal.com/uk/home"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    paypal
-                  </a>{" "}
-                  in advance of the session by using the paypal address of
-                  lochgipheadsoccercentre@gmail.com, use your child's name and
-                  year of birth as reference please - select send to friend or
-                  family so that no fees are incurred. You can pay by bank
+                  Fees can be paid by bank
                   transfer: Bank account details: Clydesdale Bank, Lochgilphead
                   Sort Code 82 66 11 Account 70036974 Account Lochgilphead
                   Soccer Centre Fees can also be paid by cash or cheque on
