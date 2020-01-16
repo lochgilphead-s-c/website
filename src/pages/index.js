@@ -209,7 +209,7 @@ export default class IndexPage extends React.Component {
                 </li>
                 <li className="nav-item">
                   <a className="nav-link js-scroll-trigger" href="#contact">
-                    Contact
+                    Contact &amp; Docs
                   </a>
                 </li>
               </Scrollspy>
@@ -417,8 +417,8 @@ export default class IndexPage extends React.Component {
                 </p> */}
                 <h4>Soccer Centre</h4>
                 <p>
-                  Once you've submitted the registration form, you must pay for the eight sessions this
-                  term in advance.
+                  Once you've submitted the registration form, you must pay for
+                  the eight sessions this term in advance.
                 </p>
                 <p>
                   <strong>P1:</strong> £1 per session = £9 at the start of term.
@@ -431,11 +431,10 @@ export default class IndexPage extends React.Component {
                 <p>Pre-schoolers sessions will run on May 17th, May 31st, June 7th and June 14th. It is £1 per session and can be paid on each night your child attends.</p> */}
                 <h4>Payment</h4>
                 <p>
-                  Fees can be paid by bank
-                  transfer: Bank account details: Clydesdale Bank, Lochgilphead
-                  Sort Code 82 66 11 Account 70036974 Account Lochgilphead
-                  Soccer Centre Fees can also be paid by cash or cheque on
-                  Friday.
+                  Fees can be paid by bank transfer: Bank account details:
+                  Clydesdale Bank, Lochgilphead Sort Code 82 66 11 Account
+                  70036974 Account Lochgilphead Soccer Centre Fees can also be
+                  paid by cash or cheque on Friday.
                 </p>
                 <div className="text-center">
                   <img
@@ -773,6 +772,76 @@ export default class IndexPage extends React.Component {
                   </li>
                 </ul>
               </div>
+            </div>
+
+            <div className="row">
+              <div className="col-md-4 mx-auto">
+                <h2>Meeting notes</h2>
+
+                <ul>
+                  <li>
+                    <p>
+                      <a
+                        href="/docs/AGM Agenda 11 Nov 2019 LSC.docx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        AGM Agenda 11 Nov 2019 LSC.docx
+                      </a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="/docs/Note of Lochgilphead Soccer Centre AGM 11.11.19.docx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Note of Lochgilphead Soccer Centre AGM 11.11.19.docx
+                      </a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="/docs/EGM Agenda 13 January 2020 LSC.docx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        EGM Agenda 13 January 2020 LSC.docx
+                      </a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a
+                        href="/docs/Note of EGM 13 January 2020 LSC.docx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Note of EGM 13 January 2020 LSC.docx
+                      </a>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-md-4 mx-auto">
+                <h2>Surveys</h2>
+                <ul>
+                  <li>
+                    <p>
+                      <a
+                        href="/docs/Lochgilphead Soccer Centre_Summary of Customer Survey Nov 2019.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Customer Survey Nov 2019
+                      </a>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-md-4 mx-auto" />
             </div>
 
             <div className="row">
