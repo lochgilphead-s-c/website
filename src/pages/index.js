@@ -23,6 +23,7 @@ import SFA1 from "../img/coerver/quality-mark-standard-blue_1.png";
 import ContentImage1 from "../img/content-image-1.jpg";
 import ContentImage2 from "../img/content-image-2.jpg";
 import ContentImage3 from "../img/content-image-3.jpg";
+import shop1 from "../img/shop1.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../components/css/creative.min.css";
 import "../components/css/lsc.css";
@@ -41,13 +42,13 @@ export default class IndexPage extends React.Component {
     this.nav = React.createRef();
     this.ticking = false;
     this.state = {
-      menuOpen: false
+      menuOpen: false,
     };
     this.toggleClass = this.toggleClass.bind(this);
   }
 
   toggleClass() {
-    this.setState(state => ({ menuOpen: !state.menuOpen }));
+    this.setState((state) => ({ menuOpen: !state.menuOpen }));
     // console.log(state);
     // this.setState({ menuOpen: !this.state.menuOpen });
   }
@@ -88,100 +89,19 @@ export default class IndexPage extends React.Component {
     // const { data } = this.props;
     // const { edges: posts } = data.allMarkdownRemark;
 
-    return (
-      <div>
-        <Helmet
-          title="Lochgilphead Soccer Centre and Lochgilphead Red Star YFC"
-          htmlAttributes={{ lang: "en-GB" }}
-          meta={[
-            {
-              name: `description`,
-              content: `Lochgilphead Soccer Centre is a youth football club supporting over 120 Mid-Argyll children to develop their football skills, work as a team and build confidence.`
-            },
-            {
-              property: `og:title`,
-              content: `Lochgilphead Soccer Centre`
-            },
-            {
-              property: `og:image`,
-              content: `https://lochgilpheadsoccercentre.club/img/LSC_logo-double.fw.png`
-            },
-            {
-              property: `og:url`,
-              content: `https://lochgilpheadsoccercentre.club/`
-            },
-            {
-              property: `og:description`,
-              content: `A youth football club in Argyll`
-            },
-            {
-              name: `twitter:card`,
-              content: `https://lochgilpheadsoccercentre.club/img/content-image-1.jpg`
-            },
-            {
-              property: `og:site_name`,
-              content: `Lochgilphead Soccer Centre`
-            },
-            {
-              name: `twitter:image:alt`,
-              content: `Evening shot of pitches at Lochgilphead Soccer Centre`
-            },
-            {
-              name: `twitter:site`,
-              content: `@LochgilpheadSC`
-            },
-            {
-              name: "google-site-verification",
-              content: "sxOy8NBiEqeIbAadOFNXvgmeDc3f738i9SLiD850Ki8"
-            }
-          ]}
-        />
-        <nav
-          className="navbar navbar-expand-lg navbar-light fixed-top"
-          id="mainNav"
-          ref={this.nav}
-        >
+    return <div>
+        <Helmet title="Lochgilphead Soccer Centre and Lochgilphead Red Star YFC" htmlAttributes={{ lang: "en-GB" }} meta={[{ name: `description`, content: `Lochgilphead Soccer Centre is a youth football club supporting over 120 Mid-Argyll children to develop their football skills, work as a team and build confidence.` }, { property: `og:title`, content: `Lochgilphead Soccer Centre` }, { property: `og:image`, content: `https://lochgilpheadsoccercentre.club/img/LSC_logo-double.fw.png` }, { property: `og:url`, content: `https://lochgilpheadsoccercentre.club/` }, { property: `og:description`, content: `A youth football club in Argyll` }, { name: `twitter:card`, content: `https://lochgilpheadsoccercentre.club/img/content-image-1.jpg` }, { property: `og:site_name`, content: `Lochgilphead Soccer Centre` }, { name: `twitter:image:alt`, content: `Evening shot of pitches at Lochgilphead Soccer Centre` }, { name: `twitter:site`, content: `@LochgilpheadSC` }, { name: "google-site-verification", content: "sxOy8NBiEqeIbAadOFNXvgmeDc3f738i9SLiD850Ki8" }]} />
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" ref={this.nav}>
           <div className="container">
             <a className="navbar-brand js-scroll-trigger" href="#page-top">
-              <img
-                className="lsc-logo"
-                src={Logo}
-                alt="Lochgilphead Soccer Centre"
-              />
+              <img className="lsc-logo" src={Logo} alt="Lochgilphead Soccer Centre" />
             </a>
-            <button
-              className="navbar-toggler navbar-toggler-right"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarResponsive"
-              aria-controls="navbarResponsive"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              onClick={this.toggleClass}
-            >
+            <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" onClick={this.toggleClass}>
               <span className="navbar-toggler-icon" />
             </button>
-            <div
-              className={
-                this.state.menuOpen
-                  ? "collapse navbar-collapse show"
-                  : "collapse navbar-collapse"
-              }
-              id="navbarResponsive"
-            >
+            <div className={this.state.menuOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} id="navbarResponsive">
               {/* <ul className="navbar-nav ml-auto"> */}
-              <Scrollspy
-                items={[
-                  "about",
-                  "register",
-                  "volunteer",
-                  "sponsors",
-                  "calendar",
-                  "contact"
-                ]}
-                currentClassName="lsc-is-current"
-                className="navbar-nav ml-auto"
-              >
+              <Scrollspy items={["about", "register", "volunteer", "sponsors", "calendar", "contact"]} currentClassName="lsc-is-current" className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <a className="nav-link js-scroll-trigger" href="#about">
                     About
@@ -203,8 +123,8 @@ export default class IndexPage extends React.Component {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="#calendar">
-                    Calendar
+                  <a className="nav-link js-scroll-trigger" href="#shop">
+                    Shop
                   </a>
                 </li>
                 <li className="nav-item">
@@ -233,18 +153,12 @@ export default class IndexPage extends React.Component {
 
             <div className="row">
               <div className="col-md-4 offset-md-2">
-                <a
-                  className="btn btn-primary btn-xl btn-block "
-                  href="#register"
-                >
+                <a className="btn btn-primary btn-xl btn-block " href="#register">
                   Register Player
                 </a>
               </div>
               <div className="col-md-4">
-                <a
-                  className="btn btn-primary btn-xl btn-block lsc-btn-volunteer"
-                  href="#volunteer"
-                >
+                <a className="btn btn-primary btn-xl btn-block lsc-btn-volunteer" href="#volunteer">
                   Volunteer
                 </a>
               </div>
@@ -260,11 +174,7 @@ export default class IndexPage extends React.Component {
 
             <div className="row justify-content-center">
               <div className="col text-center">
-                <img
-                  className="img-fluid lsc-sponsor-main lsc-sponsor-rounded lsc-sponsor-faded"
-                  src={SponsorMain}
-                  alt="Ardrishaig Community Trust"
-                />
+                <img className="img-fluid lsc-sponsor-main lsc-sponsor-rounded lsc-sponsor-faded" src={SponsorMain} alt="Ardrishaig Community Trust" />
               </div>
             </div>
 
@@ -272,39 +182,19 @@ export default class IndexPage extends React.Component {
 
             <div className="row justify-content-center  align-items-center">
               <div className="col text-center">
-                <img
-                  className="img-fluid lsc-sponsor-small lsc-sponsor-faded"
-                  src={Sponsor3}
-                  alt="Nike"
-                />
+                <img className="img-fluid lsc-sponsor-small lsc-sponsor-faded" src={Sponsor3} alt="Nike" />
               </div>
               <div className="col text-center">
-                <img
-                  className="img-fluid lsc-sponsor-small lsc-sponsor-faded"
-                  src={Sponsor2}
-                  alt="Nike"
-                />
+                <img className="img-fluid lsc-sponsor-small lsc-sponsor-faded" src={Sponsor2} alt="Nike" />
               </div>
               <div className="col text-center">
-                <img
-                  className="img-fluid lsc-sponsor-small"
-                  src={Sponsor1}
-                  alt="Nike"
-                />
+                <img className="img-fluid lsc-sponsor-small" src={Sponsor1} alt="Nike" />
               </div>
               <div className="col text-center">
-                <img
-                  className="img-fluid lsc-sponsor-small lsc-sponsor-rounded lsc-sponsor-faded lsc-sponsor-small-spaced"
-                  src={Sponsor4}
-                  alt="Nike"
-                />
+                <img className="img-fluid lsc-sponsor-small lsc-sponsor-rounded lsc-sponsor-faded lsc-sponsor-small-spaced" src={Sponsor4} alt="Nike" />
               </div>
               <div className="col text-center">
-                <img
-                  className="img-fluid lsc-sponsor-small lsc-sponsor-faded lsc-sponsor-small-spaced"
-                  src={Sponsor5}
-                  alt="Nike"
-                />
+                <img className="img-fluid lsc-sponsor-small lsc-sponsor-faded lsc-sponsor-small-spaced" src={Sponsor5} alt="Nike" />
               </div>
             </div>
           </div>
@@ -317,66 +207,38 @@ export default class IndexPage extends React.Component {
                 <h2 className="section-heading  text-center">About</h2>
                 <hr className="light my-4" />
                 <p>
-                  Established in 1995, we are a youth football club supporting
-                  over 120 Mid-Argyll children to develop their football skills,
-                  work as a team and build confidence. Our club runs a Soccer
-                  Centre and is also home to several Lochgilphead Red Star YFC
-                  teams. All teams play in{" "}
-                  <span className="lsc-claret">claret</span> and{" "}
-                  <span className="lsc-blue">blue</span> stripes.
+                  Established in 1995, we are a youth football club supporting over 120 Mid-Argyll children to develop their football skills, work as a team and build confidence. Our club runs a Soccer Centre and is also home to several Lochgilphead Red Star YFC teams. All teams play in <span className="lsc-claret">
+                    claret
+                  </span> and <span className="lsc-blue">blue</span> stripes.
                 </p>
                 <p>
-                  The club depends entirely on volunteers to operate. Volunteers
-                  are all PVG checked and our coaches are all SFA qualified. If
-                  you are interested in helping, see the{" "}
-                  <a className="text-white" href="#volunteer">
+                  The club depends entirely on volunteers to operate. Volunteers are all PVG checked and our coaches are all SFA qualified. If you are interested in helping, see the <a className="text-white" href="#volunteer">
                     Volunteer section
-                  </a>
-                  .
+                  </a>.
                 </p>
 
                 <div className="text-center">
-                  <img
-                    className="img-fluid mx-auto lsc-content-image"
-                    src={ContentImage1}
-                    alt="Lochgilphead Soccer Centre"
-                  />
+                  <img className="img-fluid mx-auto lsc-content-image" src={ContentImage1} alt="Lochgilphead Soccer Centre" />
                 </div>
                 <p>
-                  You can find all of our{" "}
-                  <a className="text-white" href="#contact">
+                  You can find all of our <a className="text-white" href="#contact">
                     policies, procedures and forms here
-                  </a>
-                  .
+                  </a>.
                 </p>
                 <h3>Soccer Centre</h3>
                 <p>
-                  Our Soccer Centre provides coaching for all primary school age
-                  children and includes a dedicated girls section. All training
-                  is held on the Astro pitch at the{" "}
-                  <a
-                    className="text-white"
-                    href="https://goo.gl/maps/FSPcEEzgxVv"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  Our Soccer Centre provides coaching for all primary school age children and includes a dedicated girls section. All training is held on the Astro pitch at the <a className="text-white" href="https://goo.gl/maps/FSPcEEzgxVv" target="_blank" rel="noopener noreferrer">
                     Lochgilphead Joint Campus
-                  </a>
-                  , except for Primary 1&apos;s during Winter who train indoors.
-                  See the{" "}
-                  <a className="text-white" href="#register">
+                  </a>, except for Primary 1&apos;s during Winter who train indoors. See the <a className="text-white" href="#register">
                     Register
-                  </a>{" "}
-                  section for more detail and our{" "}
-                  <a className="text-white" href="#calendar">
+                  </a> section for more detail and our <a className="text-white" href="#calendar">
                     Calendar
-                  </a>{" "}
-                  for dates and times.
+                  </a> for dates and times.
                 </p>
                 <h3>Lochgilphead Red Star YFC</h3>
                 <p>
-                  The Red Star YFC teams do extra training on different days and
-                  play in leagues and festivals.
+                  The Red Star YFC teams do extra training on different days
+                  and play in leagues and festivals.
                 </p>
               </div>
             </div>
@@ -391,15 +253,9 @@ export default class IndexPage extends React.Component {
                 <hr className="my-4" />
                 <h3>Registration form</h3>
                 <p>
-                  For your child to play, you need to{" "}
-                  <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSe7oHY4CO3sQf27nguritK9YmNTz6BdXn_5lXsvAH6H0AZ-yw/viewform?usp=sf_link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  For your child to play, you need to <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7oHY4CO3sQf27nguritK9YmNTz6BdXn_5lXsvAH6H0AZ-yw/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
                     complete the registration form
-                  </a>
-                  . Coaches will check attendance against registered players.
+                  </a>. Coaches will check attendance against registered players.
                 </p>
                 <h3>Price</h3>
                 <p>
@@ -417,15 +273,14 @@ export default class IndexPage extends React.Component {
                 </p> */}
                 <h4>Soccer Centre</h4>
                 <p>
-                  Once you've submitted the registration form, you must pay for
-                  the eight sessions this term in advance.
+                  Once you've submitted the registration form, you must pay
+                  for the eight sessions this term in advance.
                 </p>
                 <p>
                   <strong>P1:</strong> £1 per session = £9 at the start of term.
                 </p>
                 <p>
-                  <strong>P2-7:</strong> £2 per session = £18 at the start of
-                  term.
+                  <strong>P2-7:</strong> £2 per session = £18 at the start of term.
                 </p>
                 {/* <h4>Minikickers</h4>
                 <p>Pre-schoolers sessions will run on May 17th, May 31st, June 7th and June 14th. It is £1 per session and can be paid on each night your child attends.</p> */}
@@ -433,15 +288,11 @@ export default class IndexPage extends React.Component {
                 <p>
                   Fees can be paid by bank transfer: Bank account details:
                   Clydesdale Bank, Lochgilphead Sort Code 82 66 11 Account
-                  70036974 Account Lochgilphead Soccer Centre Fees can also be
-                  paid by cash or cheque on Friday.
+                  70036974 Account Lochgilphead Soccer Centre Fees can also
+                  be paid by cash or cheque on Friday.
                 </p>
                 <div className="text-center">
-                  <img
-                    className="img-fluid mx-auto lsc-content-image"
-                    src={ContentImage2}
-                    alt="Lochgilphead Soccer Centre"
-                  />
+                  <img className="img-fluid mx-auto lsc-content-image" src={ContentImage2} alt="Lochgilphead Soccer Centre" />
                 </div>
               </div>
             </div>
@@ -455,68 +306,56 @@ export default class IndexPage extends React.Component {
                 <h2 className="mb-4 text-center">Volunteer</h2>
                 <hr className="my-4" />
                 <p>
-                  Volunteering at the Soccer Centre is hugely rewarding and we
-                  know many parents are keen to help out. However, we understand
-                  this can be a bit daunting. This section aims to show what is
-                  involved and how easy it is to get started.
+                  Volunteering at the Soccer Centre is hugely rewarding and
+                  we know many parents are keen to help out. However, we
+                  understand this can be a bit daunting. This section aims
+                  to show what is involved and how easy it is to get
+                  started.
                 </p>
                 <div className="text-center">
-                  <img
-                    className="img-fluid mx-auto lsc-content-image"
-                    src={ContentImage3}
-                    alt="Lochgilphead Soccer Centre"
-                  />
+                  <img className="img-fluid mx-auto lsc-content-image" src={ContentImage3} alt="Lochgilphead Soccer Centre" />
                 </div>
                 <h3>Roles</h3>
                 <p>
-                  There are many ways to help out. Most roles need no knowledge
-                  of football, have limited time commitment and only require a
-                  simple PVG check, which is done locally. If you want to help
-                  but are unsure what would suit you, please{" "}
-                  <a href="#contact">contact us</a>.
+                  There are many ways to help out. Most roles need no knowledge of football, have limited time commitment and only require a simple PVG check, which is done locally. If you want to help but are unsure what would suit you, please <a href="#contact">
+                    contact us
+                  </a>.
                 </p>
                 <p>The following roles are currently available:</p>
                 <ul>
                   <li>
                     <h4>Parent assistant coach</h4>
                     <p>
-                      <strong>Role: </strong>No football knowledge required!
-                      Assistants are responsible for ensuring children are
-                      listening and behaving. They also help coaches set up.
-                      This allows our coaches to focus on providing the best
-                      training they can.
+                      <strong>Role: </strong>No football knowledge required! Assistants are responsible for ensuring children are listening and behaving. They also help coaches set up. This allows our coaches to focus on providing the best training they can.
                     </p>
                     <p>
                       You can attend for the whole session (3 hours) or just
-                      help with one year group, even your own childs group (1
-                      hour).
+                      help with one year group, even your own childs group
+                      (1 hour).
                     </p>
                     <p>
-                      <strong>Getting started: </strong>All you need is a quick
-                      and simple PVG check done locally.{" "}
-                      <a href="#contact">Contact us to get started.</a>
+                      <strong>Getting started: </strong>All you need is a quick and simple PVG check done locally. <a href="#contact">
+                        Contact us to get started.
+                      </a>
                     </p>
                   </li>
                   <li>
                     <h4>Coach</h4>
                     <p>
-                      <strong>Role: </strong>This is a hugely rewarding job. You
-                      will coach across different age groups on the Soccer
-                      Centre evening and you can also coach the Red Star youth
-                      teams. 3 hours on a Friday evening.
+                      <strong>Role: </strong>This is a hugely rewarding job. You will coach across different age groups on the Soccer Centre evening and you can also coach the Red Star youth teams. 3 hours on a Friday evening.
                     </p>
                     <p />
                     <p>
-                      <strong>Getting started: </strong>PVG check and attendance
-                      on a coaching course.{" "}
-                      <a href="#contact">Contact us to get started.</a>
+                      <strong>Getting started: </strong>PVG check and attendance on a coaching course. <a href="#contact">
+                        Contact us to get started.
+                      </a>
                     </p>
                   </li>
                   <li>
                     <h4>Chair</h4>
                     <p>
-                      Represent the club on official business, chair meetings
-                      and coordinate general strategy.
+                      Represent the club on official business, chair
+                      meetings and coordinate general strategy.
                     </p>
                   </li>
                   <li>
@@ -526,8 +365,8 @@ export default class IndexPage extends React.Component {
                   <li>
                     <h4>Publicity Officer</h4>
                     <p>
-                      Liaise with media outlets, like The Sqeak, to promote the
-                      club.
+                      Liaise with media outlets, like The Sqeak, to promote
+                      the club.
                     </p>
                   </li>
                 </ul>
@@ -548,31 +387,22 @@ export default class IndexPage extends React.Component {
                 <h2 className="section-heading text-center">Sponsors</h2>
                 <hr className="my-4" />
                 <p>
-                  We are very grateful to all our sponsors that allow the club
-                  to keep going!
+                  We are very grateful to all our sponsors that allow the
+                  club to keep going!
                 </p>
                 <p>
-                  If you are interested in sponsoring and having your logo
-                  displayed on this site, please{" "}
-                  <a href="#contact">contact us</a>.
+                  If you are interested in sponsoring and having your logo displayed on this site, please <a href="#contact">
+                    contact us
+                  </a>.
                 </p>
                 <h3 className="text-center">Ardrishaig Community Trust</h3>
                 <div className="text-center">
-                  <img
-                    className="img-fluid mx-auto lsc-sponsor-image"
-                    src={SponsorMainColour}
-                    alt="Ardrishaig Community Trust"
-                  />
+                  <img className="img-fluid mx-auto lsc-sponsor-image" src={SponsorMainColour} alt="Ardrishaig Community Trust" />
                 </div>
                 <p>
-                  Our main sponsors are Ardrishaig Community Trust who are
-                  providing us with £5,000 of sponsorship for 2018, 2019 and
-                  2020. This allows us to invest in new strips for all Red Star
-                  FC teams, enter more festivals and support out overall
-                  development plan. Visit Ardrishaig Community Trust :
-                  <a href="https://ardrishaig.org/">https://ardrishaig.org/</a>{" "}
-                  or on Facebook at{" "}
-                  <a href="https://www.facebook.com/Ardrishaig-Community-Trust-313085275506228/">
+                  Our main sponsors are Ardrishaig Community Trust who are providing us with £5,000 of sponsorship for 2018, 2019 and 2020. This allows us to invest in new strips for all Red Star FC teams, enter more festivals and support out overall development plan. Visit Ardrishaig Community Trust :<a href="https://ardrishaig.org/">
+                    https://ardrishaig.org/
+                  </a> or on Facebook at <a href="https://www.facebook.com/Ardrishaig-Community-Trust-313085275506228/">
                     https://www.facebook.com/Ardrishaig-Community-Trust-313085275506228/
                   </a>
                 </p>
@@ -583,16 +413,8 @@ export default class IndexPage extends React.Component {
                       administered by Foundation Scotland
                     </h3>
                     <div>
-                      <img
-                        className="img-fluid mx-auto lsc-sponsor-image lsc-sponsor-image-dark"
-                        src={Sponsor1}
-                        alt="ACruach Windfarm Community Fund logo"
-                      />
-                      <img
-                        className="img-fluid mx-auto lsc-sponsor-image"
-                        src={FoundationScotland}
-                        alt="Foundation Scotland logo"
-                      />
+                      <img className="img-fluid mx-auto lsc-sponsor-image lsc-sponsor-image-dark" src={Sponsor1} alt="ACruach Windfarm Community Fund logo" />
+                      <img className="img-fluid mx-auto lsc-sponsor-image" src={FoundationScotland} alt="Foundation Scotland logo" />
                     </div>
                     <p>
                       Grant support of £4,900 to invest in coach education,
@@ -602,11 +424,7 @@ export default class IndexPage extends React.Component {
                   <div className="col-sm-6 mx-auto">
                     <h3>Coop Community Fund</h3>
                     <div>
-                      <img
-                        className="img-fluid mx-auto lsc-sponsor-image lsc-sponsor-image-smaller"
-                        src={TheCoop}
-                        alt="Coop Community Fund logo"
-                      />
+                      <img className="img-fluid mx-auto lsc-sponsor-image lsc-sponsor-image-smaller" src={TheCoop} alt="Coop Community Fund logo" />
                     </div>
                     <p>
                       Supporting our membership of the Coerver Partner Club
@@ -616,31 +434,47 @@ export default class IndexPage extends React.Component {
                   <div className="col-sm-6 mx-auto">
                     <h3>Mid Argyll Youth Development Services</h3>
                     <div>
-                      <img
-                        className="img-fluid mx-auto lsc-sponsor-image"
-                        src={Mayds}
-                        alt="Mid Argyll Youth Development Services logo"
-                      />
+                      <img className="img-fluid mx-auto lsc-sponsor-image" src={Mayds} alt="Mid Argyll Youth Development Services logo" />
                     </div>
                     <p>
-                      Sponsors of rain jackets for all members of Lochgilphead
-                      Soccer Centre and Lochgilphead Red Star YFC
+                      Sponsors of rain jackets for all members of
+                      Lochgilphead Soccer Centre and Lochgilphead Red Star
+                      YFC
                     </p>
                   </div>
                   <div className="col-sm-6 mx-auto">
                     <h3>Jewson</h3>
                     <div>
-                      <img
-                        className="img-fluid mx-auto lsc-sponsor-image lsc-sponsor-image-smaller"
-                        src={Jewson}
-                        alt="Jewson logo"
-                      />
+                      <img className="img-fluid mx-auto lsc-sponsor-image lsc-sponsor-image-smaller" src={Jewson} alt="Jewson logo" />
                     </div>
                     <p>
-                      Sponsors of tracksuits for our 2004 Lochgilphead Red Star
-                      YFC team
+                      Sponsors of tracksuits for our 2004 Lochgilphead Red
+                      Star YFC team
                     </p>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-dark text-white" id="shop">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-8 mx-auto  ">
+                <h2 className="section-heading  text-center">Shop</h2>
+                <hr className="light my-4" />
+                <div className="text-center">
+                  <p>5% of purchases goes to our club!</p>
+
+                  <p>
+                    <a href="https://lochgilphead-red-star-youth.footballkit.co.uk/replica-products/football-training-wear/" target="_blank">
+                      https://lochgilphead-red-star-youth.footballkit.co.uk/replica-products/football-training-wear/
+                    </a>
+                  </p>
+                  <a href="https://lochgilphead-red-star-youth.footballkit.co.uk/replica-products/football-training-wear/" target="_blank">
+                    <img className="img-fluid mx-auto lsc-content-image" src={shop1} alt="Lochgilphead Soccer Centre shop" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -654,10 +488,7 @@ export default class IndexPage extends React.Component {
                 <h2 className="section-heading text-center">Calendar</h2>
                 <hr className="my-4 light" />
                 <div className="lsc-googleCalendar">
-                  <iframe
-                    title="lscCalendar"
-                    src="https://calendar.google.com/calendar/b/1/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23f05f40&amp;src=lochgilpheadsoccercentre%40gmail.com&amp;color=%f05f40&amp;ctz=Europe%2FLondon"
-                  />
+                  <iframe title="lscCalendar" src="https://calendar.google.com/calendar/b/1/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23f05f40&amp;src=lochgilpheadsoccercentre%40gmail.com&amp;color=%f05f40&amp;ctz=Europe%2FLondon" />
                 </div>
               </div>
             </div>
@@ -670,28 +501,17 @@ export default class IndexPage extends React.Component {
               <div className="col-md-4 mx-auto">
                 <h2>Contact</h2>
                 <p>
-                  Email:{" "}
-                  <a href="mailto:lochgilpheadsoccercentre@gmail.com">
+                  Email: <a href="mailto:lochgilpheadsoccercentre@gmail.com">
                     lochgilpheadsoccercentre@gmail.com
                   </a>
                 </p>
                 <p>
-                  Facebook:{" "}
-                  <a
-                    href="https://www.facebook.com/groups/192957874159649/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  Facebook: <a href="https://www.facebook.com/groups/192957874159649/" target="_blank" rel="noopener noreferrer">
                     https://www.facebook.com/groups/192957874159649/
                   </a>
                 </p>
                 <p>
-                  Twitter:{" "}
-                  <a
-                    href="https://twitter.com/LochgilpheadSC"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  Twitter: <a href="https://twitter.com/LochgilpheadSC" target="_blank" rel="noopener noreferrer">
                     https://twitter.com/LochgilpheadSC
                   </a>
                 </p>
@@ -701,11 +521,7 @@ export default class IndexPage extends React.Component {
                 <ul>
                   <li>
                     <p>
-                      <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSe7oHY4CO3sQf27nguritK9YmNTz6BdXn_5lXsvAH6H0AZ-yw/viewform?usp=sf_link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7oHY4CO3sQf27nguritK9YmNTz6BdXn_5lXsvAH6H0AZ-yw/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
                         Registration form
                       </a>
                     </p>
@@ -717,55 +533,35 @@ export default class IndexPage extends React.Component {
                 <ul>
                   <li>
                     <p>
-                      <a
-                        href="/docs/Code-of-Conduct-for-Players-Parents.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href="/docs/Code-of-Conduct-for-Players-Parents.pdf" target="_blank" rel="noopener noreferrer">
                         Code of conduct for Players and Parents
                       </a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a
-                        href="/docs/LSC-club-guide-child-wellbeing-protection-policy-statements.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href="/docs/LSC-club-guide-child-wellbeing-protection-policy-statements.pdf" target="_blank" rel="noopener noreferrer">
                         Child protection policy statement
                       </a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a
-                        href="/docs/LSC-club-guide-responding-to-concerns-procedures.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href="/docs/LSC-club-guide-responding-to-concerns-procedures.pdf" target="_blank" rel="noopener noreferrer">
                         Responding to concerns
                       </a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a
-                        href="/docs/LSC-club-guide-safeguarding-childrens-wellbeing.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href="/docs/LSC-club-guide-safeguarding-childrens-wellbeing.pdf" target="_blank" rel="noopener noreferrer">
                         Safeguarding child wellbeing
                       </a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a
-                        href="/docs/LSC-Privacy-Notice.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href="/docs/LSC-Privacy-Notice.pdf" target="_blank" rel="noopener noreferrer">
                         Privacy notice
                       </a>
                     </p>
@@ -781,44 +577,28 @@ export default class IndexPage extends React.Component {
                 <ul>
                   <li>
                     <p>
-                      <a
-                        href="/docs/AGM Agenda 11 Nov 2019 LSC.docx"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href="/docs/AGM Agenda 11 Nov 2019 LSC.docx" target="_blank" rel="noopener noreferrer">
                         AGM Agenda 11 Nov 2019 LSC.docx
                       </a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a
-                        href="/docs/Note of Lochgilphead Soccer Centre AGM 11.11.19.docx"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href="/docs/Note of Lochgilphead Soccer Centre AGM 11.11.19.docx" target="_blank" rel="noopener noreferrer">
                         Note of Lochgilphead Soccer Centre AGM 11.11.19.docx
                       </a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a
-                        href="/docs/EGM Agenda 13 January 2020 LSC.docx"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href="/docs/EGM Agenda 13 January 2020 LSC.docx" target="_blank" rel="noopener noreferrer">
                         EGM Agenda 13 January 2020 LSC.docx
                       </a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a
-                        href="/docs/Note of EGM 13 January 2020 LSC.docx"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href="/docs/Note of EGM 13 January 2020 LSC.docx" target="_blank" rel="noopener noreferrer">
                         Note of EGM 13 January 2020 LSC.docx
                       </a>
                     </p>
@@ -830,11 +610,7 @@ export default class IndexPage extends React.Component {
                 <ul>
                   <li>
                     <p>
-                      <a
-                        href="/docs/Lochgilphead Soccer Centre_Summary of Customer Survey Nov 2019.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href="/docs/Lochgilphead Soccer Centre_Summary of Customer Survey Nov 2019.pdf" target="_blank" rel="noopener noreferrer">
                         Customer Survey Nov 2019
                       </a>
                     </p>
@@ -847,31 +623,17 @@ export default class IndexPage extends React.Component {
             <div className="row">
               <div className="col-md-6 mx-auto text-center">
                 <div>
-                  <img
-                    className="img-fluid mx-auto lsc-certified-image"
-                    src={Coerver1}
-                    alt="Coerver logo"
-                  />
+                  <img className="img-fluid mx-auto lsc-certified-image" src={Coerver1} alt="Coerver logo" />
                 </div>
                 <p>
-                  We are a{" "}
-                  <a
-                    href="https://www.coerverscotland.uk/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  We are a <a href="https://www.coerverscotland.uk/" target="_blank" rel="noopener noreferrer">
                     Coerver Partner Club
-                  </a>
-                  .
+                  </a>.
                 </p>
               </div>
               <div className="col-md-6 mx-auto text-center">
                 <div>
-                  <img
-                    className="img-fluid mx-auto lsc-certified-image"
-                    src={SFA1}
-                    alt="SFA Quality Mark club logo"
-                  />
+                  <img className="img-fluid mx-auto lsc-certified-image" src={SFA1} alt="SFA Quality Mark club logo" />
                 </div>
                 <p>We are a SFA Quality Mark club.</p>
               </div>
@@ -881,17 +643,16 @@ export default class IndexPage extends React.Component {
             </p>
           </div>
         </section>
-      </div>
-    );
+      </div>;
   }
 }
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
+      edges: PropTypes.array,
+    }),
+  }),
 };
 
 // export const pageQuery = graphql`
